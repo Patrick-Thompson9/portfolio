@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .navSpacer {
-  aspect-ratio: 960/300;
+  aspect-ratio: 960/75;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -11,7 +11,7 @@
 }
 
 .waves {
-  background-image: url("./assets/layered-waves-haikei.svg");
+  background-image: url("./assets/NavBar_waves1.svg");
 }
 
 .navbar {
