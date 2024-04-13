@@ -14,7 +14,7 @@ const ThemeToggle = ({
   };
   return (
     <span className={"select-none " + classes} onClick={handleMode}>
-      Toggle Theme {darkTheme ? "☀️" : "🌙"}
+      Toggle Theme {darkTheme ? "🌙" : "☀️"}
     </span>
   );
 };
