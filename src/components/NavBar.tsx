@@ -6,7 +6,7 @@ import ThemeToggle from "./ThemeToggle";
 
 function NavBar() {
   const buttonClasses = `m-4 font-bold py-2 px-4 rounded-full bg-sky-400 hover:bg-blue-600 text-white
-    dark:bg-emerald-200 dark:hover:bg-blue-500 dark:text-slate-700`;
+    dark:bg-emerald-200 dark:hover:bg-emerald-500 dark:text-slate-700`;
 
   const [darkTheme, setDarkTheme] = useDarkMode();
 
@@ -27,7 +27,11 @@ function NavBar() {
           </NavLink>
         </div>
         <div className="md:absolute right-5">
-          <ThemeToggle darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+          <ThemeToggle
+            darkTheme={darkTheme}
+            setDarkTheme={setDarkTheme}
+            classes={buttonClasses}
+          />
         </div>
       </div>
       {/* <div className="navSpacer waves dark:darkWaves"></div> */}
