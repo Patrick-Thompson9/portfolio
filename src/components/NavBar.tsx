@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 function NavBar() {
   const buttonClasses =
@@ -6,16 +7,21 @@ function NavBar() {
 
   return (
     <nav>
-      <div className="container navbar h-20 flex justify-center gap-10 items-center">
-        <NavLink to="/" className={buttonClasses}>
-          Home
-        </NavLink>
-        <NavLink to="/projects" className={buttonClasses}>
-          Projects
-        </NavLink>
-        <NavLink to="/about" className={buttonClasses}>
-          About
-        </NavLink>
+      <div className="relative container navbar h-20 flex justify-center gap-10 items-center max-w-full">
+        <div className="flex items-center md:justify-between md:gap-10">
+          <NavLink to="/" className={buttonClasses}>
+            Home
+          </NavLink>
+          <NavLink to="/projects" className={buttonClasses}>
+            Projects
+          </NavLink>
+          <NavLink to="/about" className={buttonClasses}>
+            About
+          </NavLink>
+        </div>
+        <div className="md:absolute right-5">
+          <ThemeToggle />
+        </div>
       </div>
       <div className="navSpacer waves"></div>
     </nav>
