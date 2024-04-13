@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navSpacer {
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.waves {
+  background-image: url("./assets/layered-waves-haikei.svg");
+}
+
+.navbar {
+  background-color: #0066ff;
+}
+
+body {
+  background-color: #353637;
+}
