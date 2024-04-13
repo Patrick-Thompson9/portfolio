@@ -1,5 +1,14 @@
 function HomePage() {
-  return <div className="text-white">HomePage</div>;
+  return (
+    <>
+      <div>HomePage</div>
+      <ul>
+        Here are my projects
+        <li>React Job Website</li>
+        <li>This Portfolio Website</li>
+      </ul>
+    </>
+  );
 }
 
 export default HomePage;
