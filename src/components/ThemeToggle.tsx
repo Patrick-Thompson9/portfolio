@@ -7,7 +7,11 @@ const ThemeToggle = ({ darkTheme, setDarkTheme }: ThemeToggleProps) => {
   const handleMode = () => {
     setDarkTheme(!darkTheme);
   };
-  return <span onClick={handleMode}>{darkTheme ? "☀️" : "🌙"}</span>;
+  return (
+    <span className="select-none" onClick={handleMode}>
+      Toggle Theme {darkTheme ? "☀️" : "🌙"}
+    </span>
+  );
 };
 
 export default ThemeToggle;
