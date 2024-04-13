@@ -5,6 +5,7 @@ import pythonLogo from "../assets/logos/python-logo.png";
 import TSLogo from "../assets/logos/ts-logo.png";
 import tailwindLogo from "../assets/logos/tailwind-logo.png";
 import djangoLogo from "../assets/logos/django-logo.svg";
+import graphQLLogo from "../assets/logos/graphql-logo.png";
 
 function HomePage() {
   return (
@@ -29,6 +30,7 @@ function HomePage() {
             <div className="flex items-center justify-center gap-3">
               <img className="size-10" src={pythonLogo} />
               <img className="size-10" src={djangoLogo} />
+              <img className="size-10" src={graphQLLogo} />
             </div>
           </div>
         </div>
