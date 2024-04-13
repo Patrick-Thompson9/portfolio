@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import lightWaves from "../assets/NavBar_waves_day1.svg";
-import darkWaves from "../assets/NavBar_waves1.svg";
+import lightWaves from "../assets/waves/NavBar_waves_day1.svg";
+import darkWaves from "../assets/waves/NavBar_waves1.svg";
 import useDarkMode from "../hooks/useDarkMode";
 import ThemeToggle from "./ThemeToggle";
 
