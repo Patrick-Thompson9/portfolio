@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import lightWaves from "../assets/waves/NavBar_waves_day1.svg";
 import darkWaves from "../assets/waves/NavBar_waves1.svg";
@@ -10,7 +11,28 @@ function NavBar() {
 
   const [darkTheme, setDarkTheme] = useDarkMode();
 
-  const waves = darkTheme ? darkWaves : lightWaves;
+  const speed = 0.2;
+  let darkTransitionString = `opacity ${speed}s`;
+  let lightTransitionString = `opacity ${speed}s`;
+  if (darkTheme) {
+    darkTransitionString += ` ease-out ${speed}s`;
+    lightTransitionString += ` ease-in`;
+  } else {
+    lightTransitionString += ` ${speed}s`;
+    darkTransitionString += ` ease-in`;
+  }
+
+  const lightWaveStyle = {
+    transition: darkTransitionString,
+    position: "absolute",
+    width: "100%",
+  } as React.CSSProperties;
+
+  const darkWaveStyle = {
+    transition: lightTransitionString,
+    position: "absolute",
+    width: "100%",
+  } as React.CSSProperties;
 
   return (
     <nav>
@@ -35,7 +57,18 @@ function NavBar() {
         </div>
       </div>
       {/* <div className="navSpacer waves dark:darkWaves"></div> */}
-      <img className="navSpacer" src={waves} />
+      <img
+        id="lightWaves"
+        src={lightWaves}
+        alt="Light Waves"
+        style={{ ...lightWaveStyle, opacity: Number(!darkTheme) }}
+      />
+      <img
+        id="darkWaves"
+        src={darkWaves}
+        alt="Dark Waves"
+        style={{ ...darkWaveStyle, opacity: Number(darkTheme) }}
+      />
     </nav>
   );
 }
