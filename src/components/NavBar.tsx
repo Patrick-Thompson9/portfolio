@@ -5,7 +5,7 @@ import useDarkMode from "../hooks/useDarkMode";
 import ThemeToggle from "./ThemeToggle";
 
 function NavBar() {
-  const buttonClasses = `m-4 transition duration-1000 font-bold py-2 px-4 rounded-full bg-sky-400 hover:bg-blue-600 text-white shadow-md
+  const buttonClasses = `m-4 transition duration-800 font-bold py-2 px-4 rounded-full bg-sky-400 hover:bg-blue-600 text-white shadow-md
   dark:bg-emerald-200 dark:hover:bg-emerald-500 dark:text-slate-700`;
 
   const [darkTheme, setDarkTheme] = useDarkMode();
@@ -34,7 +34,7 @@ function NavBar() {
   } as React.CSSProperties;
 
   return (
-    <nav>
+    <nav className="mb-20">
       <div className="relative container bg-blue-500 h-20 flex justify-center gap-10 items-center max-w-full">
         <div className="flex items-center md:justify-between md:gap-10">
           <NavLink to="/" className={buttonClasses}>
