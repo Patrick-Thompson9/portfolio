@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 function MainLayout() {
   return (
-    <div className="dark:text-white dark:bg-slate-700 h-full transition duration-1000 font-poppins">
+    <div className="dark:text-white dark:bg-slate-700 transition duration-1000 font-poppins">
       <NavBar />
       <Outlet />
     </div>
