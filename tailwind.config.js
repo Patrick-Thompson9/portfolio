@@ -6,6 +6,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
+        poppins: ["Poppins"],
       },
       gridTemplateColumns: {
         "70/30": "70% 28%",
