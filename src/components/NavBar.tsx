@@ -5,20 +5,20 @@ import useDarkMode from "../hooks/useDarkMode";
 import ThemeToggle from "./ThemeToggle";
 
 function NavBar() {
-  const buttonClasses = `m-4 transition duration-800 font-bold py-2 px-4 rounded-full bg-sky-400 hover:bg-blue-600 text-white shadow-md
+  const buttonClasses = `m-4 transition duration-700 font-bold py-2 px-4 rounded-full bg-sky-400 hover:bg-blue-600 text-white shadow-md
   dark:bg-emerald-200 dark:hover:bg-emerald-500 dark:text-slate-700`;
 
   const [darkTheme, setDarkTheme] = useDarkMode();
 
-  const speed = 0.2;
+  const speed = 0.4;
   let darkTransitionString = `opacity ${speed}s`;
   let lightTransitionString = `opacity ${speed}s`;
   if (darkTheme) {
     darkTransitionString += ` ease-out ${speed}s`;
-    lightTransitionString += ` ease-in`;
+    lightTransitionString += ` ease-in ${speed}s`;
   } else {
-    lightTransitionString += ` ${speed}s`;
-    darkTransitionString += ` ease-in`;
+    lightTransitionString += ` ease-out ${speed}s`;
+    darkTransitionString += ` ease-in ${speed}s`;
   }
 
   const lightWaveStyle = {
