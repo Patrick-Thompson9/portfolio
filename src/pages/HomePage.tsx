@@ -11,7 +11,6 @@ import exampleImage from "../assets/example-person.avif";
 function HomePage() {
   return (
     <section>
-      <div className="text-8xl">Home Page</div>
       <ul>
         Here are my projects
         <li>React Job Website</li>
@@ -20,13 +19,18 @@ function HomePage() {
 
       <div className="flex flex-col space-y-5 items-center justify-center">
         <img src={exampleImage}></img>
-        <span className="text-8xl">PATRICK THOMPSON</span>
+        <span
+          className="text-8xl absolute top-16 background-clip mix-blend-difference 
+        bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text"
+        >
+          PATRICK THOMPSON
+        </span>
         <div className="flex items-center justify-center gap-5">
           <span className="text-4xl text-center">
             Tech <br />
             Stack
           </span>
-          <div className="flex-col items-center justify-center gap-3">
+          <div className="flex flex-col items-center justify-center gap-3">
             <div className="flex items-center justify-center gap-3">
               <img className="size-11" src={reactLogo} />
               <img className="size-10" src={TSLogo} />

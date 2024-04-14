@@ -6,7 +6,7 @@ import ThemeToggle from "./ThemeToggle";
 
 function NavBar() {
   const buttonClasses = `m-4 transition duration-700 font-bold py-2 px-4 rounded-full bg-sky-400 hover:bg-blue-600 text-white shadow-md
-  dark:bg-emerald-200 dark:hover:bg-emerald-500 dark:text-slate-700`;
+  dark:bg-emerald-200 dark:hover:bg-emerald-500 dark:text-slate-700 hover:cursor-pointer`;
 
   const [darkTheme, setDarkTheme] = useDarkMode();
 
