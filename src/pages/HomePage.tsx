@@ -10,21 +10,15 @@ import exampleImage from "../assets/example-person.avif";
 
 function HomePage() {
   return (
-    <section>
-      <ul>
-        Here are my projects
-        <li>React Job Website</li>
-        <li>This Portfolio Website</li>
-      </ul>
-
+    <section className="mt-10">
       <div className="flex flex-col space-y-5 items-center justify-center">
-        <img src={exampleImage}></img>
         <span
-          className="text-8xl absolute top-16 background-clip mix-blend-difference 
-        bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text"
+          className="lg:text-8xl text-5xl background-clip mix-blend-difference whitespace-nowrap dark:brightness-200
+          bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text"
         >
           PATRICK THOMPSON
         </span>
+        <img className="w-96" src={exampleImage}></img>
         <div className="flex items-center justify-center gap-5">
           <span className="text-4xl text-center">
             Tech <br />
