@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import lightWaves from "../assets/waves/NavBar_waves_day1.svg";
 import darkWaves from "../assets/waves/NavBar_waves1.svg";
@@ -6,8 +5,8 @@ import useDarkMode from "../hooks/useDarkMode";
 import ThemeToggle from "./ThemeToggle";
 
 function NavBar() {
-  const buttonClasses = `m-4 font-bold py-2 px-4 rounded-full bg-sky-400 hover:bg-blue-600 text-white shadow-md
-    dark:bg-emerald-200 dark:hover:bg-emerald-500 dark:text-slate-700`;
+  const buttonClasses = `m-4 transition duration-1000 font-bold py-2 px-4 rounded-full bg-sky-400 hover:bg-blue-600 text-white shadow-md
+  dark:bg-emerald-200 dark:hover:bg-emerald-500 dark:text-slate-700`;
 
   const [darkTheme, setDarkTheme] = useDarkMode();
 
