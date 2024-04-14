@@ -29,12 +29,11 @@ function NavBar() {
 
   const darkWaveStyle = {
     transition: lightTransitionString,
-    position: "absolute",
     width: "100%",
   } as React.CSSProperties;
 
   return (
-    <nav className="mb-20">
+    <nav>
       <div className="relative container bg-blue-500 h-20 flex justify-center gap-10 items-center max-w-full">
         <div className="flex items-center md:justify-between md:gap-10">
           <NavLink to="/" className={buttonClasses}>

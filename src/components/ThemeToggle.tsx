@@ -13,7 +13,10 @@ const ThemeToggle = ({
     setDarkTheme(!darkTheme);
   };
   return (
-    <span className={"select-none " + classes} onClick={handleMode}>
+    <span
+      className={"select-none whitespace-nowrap " + classes}
+      onClick={handleMode}
+    >
       Toggle Theme {darkTheme ? "🌙" : "☀️"}
     </span>
   );
