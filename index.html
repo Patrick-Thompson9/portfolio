@@ -49,7 +49,7 @@
           fill="#0066ff"
         ></path>
       </g>
-      <g id="wave2">
+      <g id="wave2" style="visibility: hidden">
         <path
           id="wave21"
           d="M0 61L10.7 62.2C21.3 63.3 42.7 65.7 64 64.8C85.3 64 106.7 60 128 58.5C149.3 57 170.7 58 192 55.2C213.3 52.3 234.7 45.7 256 46.5C277.3 47.3 298.7 55.7 320 57.8C341.3 60 362.7 56 384 52C405.3 48 426.7 44 448 46C469.3 48 490.7 56 512 57.5C533.3 59 554.7 54 576 49.3C597.3 44.7 618.7 40.3 640 41.8C661.3 43.3 682.7 50.7 704 54.8C725.3 59 746.7 60 768 57.7C789.3 55.3 810.7 49.7 832 47.8C853.3 46 874.7 48 896 48.7C917.3 49.3 938.7 48.7 949.3 48.3L960 48L960 0L949.3 0C938.7 0 917.3 0 896 0C874.7 0 853.3 0 832 0C810.7 0 789.3 0 768 0C746.7 0 725.3 0 704 0C682.7 0 661.3 0 640 0C618.7 0 597.3 0 576 0C554.7 0 533.3 0 512 0C490.7 0 469.3 0 448 0C426.7 0 405.3 0 384 0C362.7 0 341.3 0 320 0C298.7 0 277.3 0 256 0C234.7 0 213.3 0 192 0C170.7 0 149.3 0 128 0C106.7 0 85.3 0 64 0C42.7 0 21.3 0 10.7 0L0 0Z"
@@ -84,36 +84,28 @@
         { path: "#wave21" },
         { repeat: 999, duration: 3000, yoyo: true }
       ).start();
-      // const animateWave2 = KUTE.fromTo(
-      //   "#wave12",
-      //   { path: "#wave12" },
-      //   { path: "#wave22" },
-      //   { repeat: 999, duration: 3000, yoyo: true }
-      // ).start();
-      // const animateWave3 = KUTE.fromTo(
-      //   "#wave13",
-      //   { path: "#wave13" },
-      //   { path: "#wave23" },
-      //   { repeat: 999, duration: 3000, yoyo: true }
-      // ).start();
-      // const animateWave4 = KUTE.fromTo(
-      //   "#wave14",
-      //   { path: "#wave14" },
-      //   { path: "#wave24" },
-      //   { repeat: 999, duration: 3000, yoyo: true }
-      // ).start();
-      // const animateWave5 = KUTE.fromTo(
-      //   "#wave15",
-      //   { path: "#wave15" },
-      //   { path: "#wave25" },
-      //   { repeat: 999, duration: 3000, yoyo: true }
-      // ).start();
-    </script>
-    <script>
       const animateWave2 = KUTE.fromTo(
         "#wave12",
         { path: "#wave12" },
         { path: "#wave22" },
+        { repeat: 999, duration: 3000, yoyo: true }
+      ).start();
+      const animateWave3 = KUTE.fromTo(
+        "#wave13",
+        { path: "#wave13" },
+        { path: "#wave23" },
+        { repeat: 999, duration: 3000, yoyo: true }
+      ).start();
+      const animateWave4 = KUTE.fromTo(
+        "#wave14",
+        { path: "#wave14" },
+        { path: "#wave24" },
+        { repeat: 999, duration: 3000, yoyo: true }
+      ).start();
+      const animateWave5 = KUTE.fromTo(
+        "#wave15",
+        { path: "#wave15" },
+        { path: "#wave25" },
         { repeat: 999, duration: 3000, yoyo: true }
       ).start();
     </script>
