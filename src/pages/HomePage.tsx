@@ -7,6 +7,7 @@ import tailwindLogo from "../assets/logos/tailwind-logo.png";
 import djangoLogo from "../assets/logos/django-logo.svg";
 import graphQLLogo from "../assets/logos/graphql-logo.png";
 import exampleImage from "../assets/example-person.avif";
+import KUTE from "kute.js";
 
 function HomePage() {
   return (
