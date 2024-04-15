@@ -7,14 +7,13 @@ import tailwindLogo from "../assets/logos/tailwind-logo.png";
 import djangoLogo from "../assets/logos/django-logo.svg";
 import graphQLLogo from "../assets/logos/graphql-logo.png";
 import exampleImage from "../assets/example-person.avif";
-import KUTE from "kute.js";
 
 function HomePage() {
   return (
     <section className="mt-10">
       <div className="flex flex-col space-y-5 items-center justify-center">
         <span
-          className="lg:text-8xl text-5xl background-clip mix-blend-difference whitespace-nowrap dark:brightness-200
+          className="lg:text-8xl text-5xl background-clip mix-blend-difference whitespace-nowrap dark:brightness-200 tracking-tight 
           bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text"
         >
           PATRICK THOMPSON

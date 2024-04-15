@@ -1,5 +1,8 @@
+import Project from "../components/Project";
+import { buttonClasses } from "../layouts/MainLayout";
+
 function ProjectsPage() {
-  return <div>ProjectsPage</div>;
+  return <Project buttonClasses={buttonClasses} />;
 }
 
 export default ProjectsPage;
