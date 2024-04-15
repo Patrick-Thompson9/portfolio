@@ -3,6 +3,7 @@ import lightWaves from "../assets/waves/NavBar_waves_day1.svg";
 import darkWaves from "../assets/waves/NavBar_waves1.svg";
 import useDarkMode from "../hooks/useDarkMode";
 import ThemeToggle from "./ThemeToggle";
+import KUTE from "kute.js";
 
 function NavBar() {
   const buttonClasses = `m-4 transition duration-700 font-bold py-2 px-4 rounded-full bg-sky-400 hover:bg-blue-600 text-white shadow-md
@@ -55,7 +56,8 @@ function NavBar() {
         </div>
       </div>
       {/* <div className="navSpacer waves dark:darkWaves"></div> */}
-      <img
+
+      {/* <img
         id="lightWaves"
         src={lightWaves}
         alt="Light Waves"
@@ -66,7 +68,7 @@ function NavBar() {
         src={darkWaves}
         alt="Dark Waves"
         style={{ ...darkWaveStyle, opacity: Number(darkTheme) }}
-      />
+      /> */}
     </nav>
   );
 }
