@@ -16,7 +16,7 @@ function CursorTrackSVG({
   size = "7",
   viewBox = "512 512",
   stroke = "",
-  gradientOffset = { x: 15, y: 10 },
+  gradientOffset = { x: 20, y: 10 },
 }: props) {
   const context = useContext(AppContext);
 
