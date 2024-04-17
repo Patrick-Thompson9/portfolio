@@ -3,9 +3,8 @@ import { AppContext } from "../App";
 
 interface props {
   d: string;
-  size?: string;
+  className?: string;
   viewBox?: string;
-  stroke?: string;
   gradientOffset?: { x: number; y: number };
 }
 
@@ -13,9 +12,8 @@ let gradientIdCounter = 0;
 
 function CursorTrackSVG({
   d,
-  size = "7",
   viewBox = "512 512",
-  stroke = "",
+  className = "size-7",
   gradientOffset = { x: 20, y: 10 },
 }: props) {
   const context = useContext(AppContext);
@@ -49,7 +47,7 @@ function CursorTrackSVG({
       focusable="false"
       data-prefix="fas"
       data-icon="up-right-from-square"
-      className={`size-${size} ${stroke}`}
+      className={`${className} cursor-pointer`}
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox={`0 0 ${viewBox}`}
