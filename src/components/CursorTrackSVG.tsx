@@ -56,7 +56,7 @@ function CursorTrackSVG({
         <radialGradient
           id={gradientId}
           gradientUnits="userSpaceOnUse"
-          r="50%"
+          r="40%"
           cx={gradientCenter.cx}
           cy={gradientCenter.cy}
         >
