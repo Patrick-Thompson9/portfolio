@@ -24,8 +24,8 @@ function Project({ buttonClasses }: buttonClasses) {
     if (cardsRef.current !== null) {
       const rect = cardsRef.current.getBoundingClientRect();
       setGradientCenter({
-        cx: `${(cursorPos.x / rect.width) * 100}%`,
-        cy: `${(cursorPos.y / rect.height) * 100}%`,
+        cx: `${(cursorPos.x / rect.width) * 100 - 25}%`,
+        cy: `${(cursorPos.y / rect.height) * 100 - 25}%`,
       });
     }
   }, [cursorPos, cardsRef]);
