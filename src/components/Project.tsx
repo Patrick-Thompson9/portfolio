@@ -55,7 +55,6 @@ function Project({ buttonClasses }: buttonClasses) {
           </NavLink>
           <NavLink to="https://example.com" className={buttonClasses}>
             <div className="flex items-center justify-start gap-2">
-              {/* <FontAwesomeIcon icon={faUpRightFromSquare} className="size-7" /> */}
               <svg
                 aria-hidden="true"
                 focusable="false"
