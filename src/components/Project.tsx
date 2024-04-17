@@ -24,8 +24,8 @@ function Project({ buttonClasses }: buttonClasses) {
     if (cardsRef.current !== null) {
       const rect = cardsRef.current.getBoundingClientRect();
       setGradientCenter({
-        cx: `${(cursorPos.x / rect.width) * 100 - 25}%`,
-        cy: `${(cursorPos.y / rect.height) * 100 - 25}%`,
+        cx: `${(cursorPos.x / rect.width) * 100}%`,
+        cy: `${(cursorPos.y / rect.height) * 100}%`,
       });
     }
   }, [cursorPos, cardsRef]);
@@ -58,7 +58,7 @@ function Project({ buttonClasses }: buttonClasses) {
                 focusable="false"
                 data-prefix="fas"
                 data-icon="up-right-from-square"
-                className="svg-inline--fa fa-up-right-from-square size-7 transition duration-200"
+                className="svg-inline--fa fa-up-right-from-square size-20 transition duration-200"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
