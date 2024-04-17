@@ -6,16 +6,6 @@ import { AppContext } from "../App";
 import CursorTrackSVG from "./CursorTrackSVG";
 import React, { forwardRef, useRef } from "react";
 
-const LinkLogo = forwardRef<SVGPathElement, React.SVGProps<SVGSVGElement>>(
-  (props, ref) => (
-    <svg {...props}>
-      <path ref={ref} d="M10 10 H 90 V 90 H 10 Z" />
-    </svg>
-  )
-);
-
-// linkLogo.attributes["path"]
-
 interface buttonClasses {
   buttonClasses: string;
 }
@@ -39,7 +29,6 @@ function Project({ buttonClasses }: buttonClasses) {
       className="lg:w-2/3 lg:mx-auto shadow-lg transition duration-1000 border-2 border-neutral-300 bg-slate-200 text-black p-10 rounded-lg
      stroke-[10] hover:stroke-[20] my-5 dark:bg-slate-600 dark:text-white dark:border-neutral-500"
     >
-      <LinkLogo ref={pathRef} />
       <div className="flex flex-col items-center justify-center">
         <span>Project Name</span>
         <img src="Example" alt="Example Gif of Project"></img>
