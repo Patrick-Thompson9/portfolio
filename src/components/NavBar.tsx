@@ -1,15 +1,23 @@
 import { NavLink } from "react-router-dom";
 import lightWaves from "../assets/waves/day_waves1.svg";
 import darkWaves from "../assets/waves/night_waves1.svg";
-import useDarkMode from "../hooks/useDarkMode";
 import ThemeToggle from "./ThemeToggle";
+import { AppContext } from "../App";
+import { useContext } from "react";
 
 interface buttonClasses {
   buttonClasses: string;
 }
 
 function NavBar({ buttonClasses }: buttonClasses) {
-  const [darkTheme, setDarkTheme] = useDarkMode();
+  const context = useContext(AppContext);
+
+  if (!context) {
+    return null;
+  }
+
+  const darkTheme = context.darkTheme;
+  const setDarkTheme = context.setDarkTheme;
 
   const speed = 0.4;
   let darkTransitionString = `opacity ${speed}s`;

@@ -14,8 +14,15 @@ function Project({ buttonClasses }: buttonClasses) {
     return null;
   }
 
-  const { cursorPos, cardsRef, handleMouseMove, mouseOnCard, setMouseOnCard } =
-    context;
+  const {
+    cursorPos,
+    cardsRef,
+    handleMouseMove,
+    mouseOnCard,
+    setMouseOnCard,
+    darkTheme,
+    setDarkTheme,
+  } = context;
   const [gradientCenter, setGradientCenter] = useState({
     cx: "50%",
     cy: "50%",
@@ -73,8 +80,13 @@ function Project({ buttonClasses }: buttonClasses) {
                     cx={gradientCenter.cx}
                     cy={gradientCenter.cy}
                   >
-                    {mouseOnCard && <stop stopColor="#f7f7f7" />}
-                    <stop offset="1" stopColor="#34d399" />
+                    {mouseOnCard && (
+                      <stop stopColor={darkTheme ? "#f7f7f7" : "#3c3c3c"} />
+                    )}
+                    <stop
+                      offset="1"
+                      stopColor={darkTheme ? "#34d399" : "#38bdf8"}
+                    />
                   </radialGradient>
                 </defs>
                 <path

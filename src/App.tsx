@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import MainLayout from "./layouts/MainLayout";
 import React, { useRef, useState } from "react";
+import useDarkMode from "./hooks/useDarkMode";
 
 type AppContextType = {
   cardsRef: React.RefObject<HTMLElement>;
@@ -11,11 +12,14 @@ type AppContextType = {
   cursorPos: { x: number; y: number };
   mouseOnCard: boolean;
   setMouseOnCard: React.Dispatch<React.SetStateAction<boolean>>;
+  darkTheme: boolean;
+  setDarkTheme: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const AppContext = React.createContext<AppContextType | null>(null);
 
 function App() {
+  const [darkTheme, setDarkTheme] = useDarkMode();
   const cardsRef = useRef<HTMLElement>(null);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [mouseOnCard, setMouseOnCard] = useState(false);
@@ -37,6 +41,8 @@ function App() {
         handleMouseMove,
         mouseOnCard,
         setMouseOnCard,
+        darkTheme,
+        setDarkTheme,
       }}
     >
       <Router>
