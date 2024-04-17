@@ -10,8 +10,8 @@ interface buttonClasses {
 function Project({ buttonClasses }: buttonClasses) {
   return (
     <section
-      className="lg:w-2/3 lg:mx-auto shadow-lg transition duration-1000 bg-slate-200 text-black p-10 rounded-lg
-     dark:bg-slate-600 dark:text-white"
+      className="lg:w-2/3 lg:mx-auto shadow-lg transition duration-1000 border-2 border-neutral-300 bg-slate-200 text-black p-10 rounded-lg
+     stroke-[0.1] hover:stroke-[0.2] dark:bg-slate-600 dark:text-white dark:border-neutral-600"
     >
       <div className="flex flex-col items-center justify-center">
         <span>Project Name</span>
@@ -28,7 +28,22 @@ function Project({ buttonClasses }: buttonClasses) {
           </NavLink>
           <NavLink to="https://example.com" className={buttonClasses}>
             <div className="flex items-center justify-start gap-2">
-              <FontAwesomeIcon icon={faUpRightFromSquare} className="size-7" />
+              {/* <FontAwesomeIcon icon={faUpRightFromSquare} className="size-7" /> */}
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="up-right-from-square"
+                className="svg-inline--fa fa-up-right-from-square size-7"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                ></path>
+              </svg>
               <span className="hidden sm:block">Link to Live Site</span>
             </div>
           </NavLink>
