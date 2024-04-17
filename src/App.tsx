@@ -9,6 +9,8 @@ type AppContextType = {
   cardsRef: React.RefObject<HTMLElement>;
   handleMouseMove: (e: React.MouseEvent<Element, MouseEvent>) => void;
   cursorPos: { x: number; y: number };
+  mouseOnCard: boolean;
+  setMouseOnCard: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const AppContext = React.createContext<AppContextType | null>(null);
@@ -16,6 +18,7 @@ const AppContext = React.createContext<AppContextType | null>(null);
 function App() {
   const cardsRef = useRef<HTMLElement>(null);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const [mouseOnCard, setMouseOnCard] = useState(false);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (cardsRef.current !== null) {
@@ -27,7 +30,15 @@ function App() {
   };
 
   return (
-    <AppContext.Provider value={{ cursorPos, cardsRef, handleMouseMove }}>
+    <AppContext.Provider
+      value={{
+        cursorPos,
+        cardsRef,
+        handleMouseMove,
+        mouseOnCard,
+        setMouseOnCard,
+      }}
+    >
       <Router>
         <Routes>
           <Route path="/" element={<MainLayout />}>

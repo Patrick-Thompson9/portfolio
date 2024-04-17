@@ -14,7 +14,8 @@ function Project({ buttonClasses }: buttonClasses) {
     return null;
   }
 
-  const { cursorPos, cardsRef, handleMouseMove } = context;
+  const { cursorPos, cardsRef, handleMouseMove, mouseOnCard, setMouseOnCard } =
+    context;
   const [gradientCenter, setGradientCenter] = useState({
     cx: "50%",
     cy: "50%",
@@ -34,8 +35,10 @@ function Project({ buttonClasses }: buttonClasses) {
     <section
       ref={cardsRef}
       onMouseMove={(e) => handleMouseMove(e)}
+      onMouseEnter={() => setMouseOnCard(true)}
+      onMouseLeave={() => setMouseOnCard(false)}
       className="lg:w-2/3 lg:mx-auto shadow-lg transition duration-1000 border-2 border-neutral-300 bg-slate-200 text-black p-10 rounded-lg
-     stroke-[10] hover:stroke-[30] dark:bg-slate-600 dark:text-white dark:border-neutral-600"
+     stroke-[10] hover:stroke-[20] dark:bg-slate-600 dark:text-white dark:border-neutral-600"
     >
       <div className="flex flex-col items-center justify-center">
         <span>Project Name</span>
@@ -71,7 +74,7 @@ function Project({ buttonClasses }: buttonClasses) {
                     cx={gradientCenter.cx}
                     cy={gradientCenter.cy}
                   >
-                    <stop stopColor="#f7f7f7" />
+                    {mouseOnCard && <stop stopColor="#f7f7f7" />}
                     <stop offset="1" stopColor="#34d399" />
                   </radialGradient>
                 </defs>
