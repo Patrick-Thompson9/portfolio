@@ -35,7 +35,7 @@ function Project({ buttonClasses }: buttonClasses) {
       ref={cardsRef}
       onMouseMove={(e) => handleMouseMove(e)}
       className="lg:w-2/3 lg:mx-auto shadow-lg transition duration-1000 border-2 border-neutral-300 bg-slate-200 text-black p-10 rounded-lg
-     stroke-[10] hover:stroke-[30] stroke-red-500 dark:bg-slate-600 dark:text-white dark:border-neutral-600"
+     stroke-[10] hover:stroke-[30] dark:bg-slate-600 dark:text-white dark:border-neutral-600"
     >
       <div className="flex flex-col items-center justify-center">
         <span>Project Name</span>
@@ -72,7 +72,7 @@ function Project({ buttonClasses }: buttonClasses) {
                     cy={gradientCenter.cy}
                   >
                     <stop stopColor="#f7f7f7" />
-                    <stop offset="1" stopColor="#10b981" />
+                    <stop offset="1" stopColor="#34d399" />
                   </radialGradient>
                 </defs>
                 <path
