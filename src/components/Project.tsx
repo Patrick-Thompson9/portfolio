@@ -45,7 +45,7 @@ function Project({ buttonClasses }: buttonClasses) {
       onMouseEnter={() => setMouseOnCard(true)}
       onMouseLeave={() => setMouseOnCard(false)}
       className="lg:w-2/3 lg:mx-auto shadow-lg transition duration-1000 border-2 border-neutral-300 bg-slate-200 text-black p-10 rounded-lg
-     stroke-[10] hover:stroke-[20] dark:bg-slate-600 dark:text-white dark:border-neutral-600"
+     stroke-[10] hover:stroke-[20] my-5 dark:bg-slate-600 dark:text-white dark:border-neutral-500"
     >
       <div className="flex flex-col items-center justify-center">
         <span>Project Name</span>
