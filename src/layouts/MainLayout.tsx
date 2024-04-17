@@ -2,7 +2,7 @@ import NavBar from "../components/NavBar";
 import { Outlet } from "react-router-dom";
 
 export const buttonClasses = `m-4 transition duration-700 font-bold py-2 px-4 rounded-full bg-sky-400 hover:bg-blue-600 text-white shadow-md
-  dark:bg-emerald-200 dark:hover:bg-emerald-500 dark:text-slate-700 hover:cursor-pointer tracking-wide`;
+  dark:bg-emerald-400 dark:hover:bg-emerald-600 dark:text-slate-700 hover:cursor-pointer tracking-wide hover:duration-200`;
 
 function MainLayout() {
   return (
