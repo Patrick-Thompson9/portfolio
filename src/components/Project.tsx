@@ -4,12 +4,9 @@ import gitHubLogo from "../assets/logos/github-logo.svg";
 import { useContext } from "react";
 import { AppContext } from "../App";
 import CursorTrackSVG from "./CursorTrackSVG";
+import { buttonClasses } from "../layouts/MainLayout";
 
-interface buttonClasses {
-  buttonClasses: string;
-}
-
-function Project({ buttonClasses }: buttonClasses) {
+function Project() {
   const context = useContext(AppContext);
 
   if (!context) {
