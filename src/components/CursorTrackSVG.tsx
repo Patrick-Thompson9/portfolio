@@ -69,7 +69,7 @@ function CursorTrackSVG({
           cy={gradientCenter.cy}
         >
           {mouseOnCard && (
-            <stop stopColor={darkTheme ? "#f7f7f7" : "#3c3c3c"} />
+            <stop stopColor={darkTheme ? "#f7f7f7" : "#FF465F"} />
           )}
           <stop offset="1" stopColor={darkTheme ? "#34d399" : "#38bdf8"} />
         </radialGradient>
