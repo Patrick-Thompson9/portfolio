@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 function ShinyButton() {
   return (
     <motion.button
-      className="m-10 py-2 px-4 bg-black rounded-md button-radial-gradient"
+      className="relative m-10 py-2 px-4 bg-black rounded-md button-radial-gradient"
       onClick={() => console.log("Shiny Button Clicked!")}
       initial={{ "--x": "100%" }}
       animate={{ "--x": "-100%" }}
@@ -12,9 +12,9 @@ function ShinyButton() {
       transition={{
         repeat: Infinity,
         repeatType: "loop",
-        repeatDelay: 2,
+        repeatDelay: 1,
         type: "spring",
-        stiffness: 30,
+        stiffness: 12,
         damping: 20,
         mass: 0.5,
         scale: {
@@ -28,6 +28,7 @@ function ShinyButton() {
       <span className="text-slate-100 tracking-wide font-light size-full block relative linear-mask">
         Shiny Button
       </span>
+      <span className="block absolute inset-0 rounded-md p-px linear-overlay"></span>
     </motion.button>
   );
 }
