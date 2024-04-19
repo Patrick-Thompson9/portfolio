@@ -18,8 +18,8 @@ function ShinyButton({ buttonText }: props) {
     ? "dark-button-radial-gradient"
     : "button-radial-gradient";
   const linearOverlayClasses = darkTheme
-    ? "dark-linear-overlay"
-    : "linear-overlay";
+    ? "p-px dark-linear-overlay"
+    : "p-0.5 linear-overlay";
   const textClasses = darkTheme ? "text-slate-700" : "text-slate-100";
 
   return (
@@ -51,7 +51,7 @@ function ShinyButton({ buttonText }: props) {
         {buttonText}
       </span>
       <span
-        className={`block absolute inset-0 rounded-md p-0.5 ${linearOverlayClasses}`}
+        className={`block absolute inset-0 rounded-md ${linearOverlayClasses}`}
       ></span>
     </motion.button>
   );
