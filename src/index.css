@@ -24,6 +24,7 @@ body,
   background-size: cover;
 } */
 
+/* static gradient on the shiny button */
 .button-radial-gradient {
   background: radial-gradient(
       circle at 50% 0%,
@@ -33,6 +34,7 @@ body,
     rgba(35, 35, 35, 1);
 }
 
+/* shadow moving across the shiny button */
 .linear-mask {
   mask-image: linear-gradient(
     -60deg,
@@ -48,6 +50,7 @@ body,
   );
 }
 
+/* border highlight moving across the shiny button */
 .linear-overlay {
   background: linear-gradient(
     -60deg,
@@ -62,6 +65,7 @@ body,
   -webkit-mask-composite: xor;
 }
 
+/* project card off screen */
 .off-screen {
   opacity: 0;
   transform: translateX(-100%);
@@ -69,17 +73,19 @@ body,
   transition: all 1s;
 }
 
+/* project card sliding in when in view */
 .slide-in {
   opacity: 1;
   transform: translateX(0);
   filter: blur(0);
 }
 
+/* cancel animations if user prefers reduced motion */
 @media (prefers-reduced-motion) {
-  #waves {
-    transition: none;
-  }
-  .offScreen {
+  .linear-overlay,
+  .linear-mask,
+  .off-screen,
+  .slide-in {
     transition: none;
   }
 }
