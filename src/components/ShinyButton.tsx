@@ -8,7 +8,7 @@ function ShinyButton() {
       onClick={() => console.log("Shiny Button Clicked!")}
       initial={{ "--x": "100%" }}
       animate={{ "--x": "-100%" }}
-      whileTap={{ scale: 0.5 }}
+      whileTap={{ scale: 0.95 }}
       transition={{
         repeat: Infinity,
         repeatType: "loop",
@@ -19,9 +19,9 @@ function ShinyButton() {
         mass: 0.5,
         scale: {
           type: "spring",
-          stiffness: 1,
-          damping: 5,
-          mass: 0.1,
+          stiffness: 35,
+          damping: 3,
+          mass: 0.2,
         },
       }}
     >
