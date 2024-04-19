@@ -2,6 +2,9 @@ import { useContext, useState, useEffect } from "react";
 import { AppContext } from "../App";
 
 interface props {
+  projectRef: React.RefObject<HTMLElement>;
+  cursorPos: { x: number; y: number };
+  mouseOnCard: boolean;
   d: string;
   className?: string;
   viewBox?: string;
@@ -11,6 +14,9 @@ interface props {
 let gradientIdCounter = 0;
 
 function CursorTrackSVG({
+  projectRef,
+  cursorPos,
+  mouseOnCard,
   d,
   viewBox = "512 512",
   className = "size-7",
@@ -22,7 +28,8 @@ function CursorTrackSVG({
     return null;
   }
 
-  const { cursorPos, cardsRef, mouseOnCard, darkTheme } = context;
+  const { darkTheme } = context;
+
   const [gradientCenter, setGradientCenter] = useState({
     cx: "50%",
     cy: "50%",
@@ -31,15 +38,16 @@ function CursorTrackSVG({
   // Generate a unique id for the gradient
   const gradientId = `linkGradient${gradientIdCounter++}`;
 
+  // Update the gradient center based on the cursor position
   useEffect(() => {
-    if (cardsRef.current !== null) {
-      const rect = cardsRef.current.getBoundingClientRect();
+    if (projectRef.current !== null) {
+      const rect = projectRef.current.getBoundingClientRect();
       setGradientCenter({
         cx: `${(cursorPos.x / rect.width) * 100 - gradientOffset.x}%`,
         cy: `${(cursorPos.y / rect.height) * 100 - gradientOffset.y}%`,
       });
     }
-  }, [cursorPos, cardsRef]);
+  }, [cursorPos, projectRef]);
 
   return (
     <svg
