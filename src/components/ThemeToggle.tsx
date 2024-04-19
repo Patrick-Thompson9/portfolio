@@ -1,3 +1,5 @@
+import ShinyButton from "./ShinyButton";
+
 interface ThemeToggleProps {
   darkTheme: boolean;
   setDarkTheme: (darkTheme: boolean) => void;
@@ -12,12 +14,10 @@ const ThemeToggle = ({
   const handleMode = () => {
     setDarkTheme(!darkTheme);
   };
+  const emoji = darkTheme ? "🌙" : "☀️";
   return (
-    <span
-      className={"select-none whitespace-nowrap " + classes}
-      onClick={handleMode}
-    >
-      Toggle Theme {darkTheme ? "🌙" : "☀️"}
+    <span onClick={handleMode}>
+      <ShinyButton buttonText={`Toggle Theme ${emoji}`} />
     </span>
   );
 };

@@ -4,7 +4,8 @@ function AboutPage() {
   return (
     <>
       <div>AboutPage</div>
-      <ShinyButton />
+      <ShinyButton buttonText="Go Back" />
+      <ShinyButton buttonText="Contact Me" />
     </>
   );
 }

@@ -25,38 +25,61 @@ body,
 } */
 
 /* static gradient on the shiny button */
+.dark-button-radial-gradient {
+  background: radial-gradient(
+      circle at 50% 0%,
+      rgba(250, 250, 250, 0.1) 0%,
+      transparent 70%
+    ),
+    rgb(56, 170, 98);
+}
 .button-radial-gradient {
   background: radial-gradient(
       circle at 50% 0%,
       rgba(250, 250, 250, 0.1) 0%,
       transparent 70%
     ),
-    rgba(35, 35, 35, 1);
+    rgb(56, 189, 248);
 }
 
 /* shadow moving across the shiny button */
 .linear-mask {
   mask-image: linear-gradient(
     -60deg,
-    white calc(var(--x) + 15%),
+    black calc(var(--x) + 15%),
     transparent calc(var(--x) + 20%),
-    white calc(var(--x) + 100%)
+    black calc(var(--x) + 100%)
   );
   -webkit-mask-image: linear-gradient(
     -60deg,
-    white calc(var(--x) + 15%),
+    black calc(var(--x) + 15%),
     transparent calc(var(--x) + 20%),
-    white calc(var(--x) + 100%)
+    black calc(var(--x) + 100%)
   );
+}
+
+/* border highlight moving across the shiny button */
+.dark-linear-overlay {
+  background: linear-gradient(
+    -60deg,
+    rgba(255, 255, 255, 0.1) calc(var(--x) + 20%),
+    rgba(255, 255, 255, 0.5) calc(var(--x) + 25%),
+    rgba(255, 255, 255, 0.1) calc(var(--x) + 90%)
+  );
+  mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
+  -webkit-mask: linear-gradient(white, white) content-box,
+    linear-gradient(white, white);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
 }
 
 /* border highlight moving across the shiny button */
 .linear-overlay {
   background: linear-gradient(
     -60deg,
-    rgba(255, 255, 255, 0.1) calc(var(--x) + 20%),
-    rgba(255, 255, 255, 0.5) calc(var(--x) + 25%),
-    rgba(255, 255, 255, 0.1) calc(var(--x) + 90%)
+    rgba(0, 0, 0, 0.1) calc(var(--x) + 20%),
+    rgba(0, 0, 0, 0.5) calc(var(--x) + 25%),
+    rgba(0, 0, 0, 0.1) calc(var(--x) + 90%)
   );
   mask: linear-gradient(black, black) content-box, linear-gradient(black, black);
   -webkit-mask: linear-gradient(black, black) content-box,

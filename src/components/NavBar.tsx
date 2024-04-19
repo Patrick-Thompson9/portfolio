@@ -4,6 +4,7 @@ import darkWaves from "../assets/waves/night_waves1.svg";
 import ThemeToggle from "./ThemeToggle";
 import { AppContext } from "../App";
 import { useContext } from "react";
+import ShinyButton from "../components/ShinyButton";
 
 interface buttonClasses {
   buttonClasses: string;
@@ -45,14 +46,14 @@ function NavBar({ buttonClasses }: buttonClasses) {
     <nav>
       <div className="relative container bg-blue-500 h-20 flex justify-center gap-10 items-center max-w-full">
         <div className="flex items-center md:justify-between md:gap-10">
-          <NavLink to="/" className={buttonClasses}>
-            Home
+          <NavLink to="/">
+            <ShinyButton buttonText="Home" />
           </NavLink>
-          <NavLink to="/projects" className={buttonClasses}>
-            Projects
+          <NavLink to="/projects">
+            <ShinyButton buttonText="Projects" />
           </NavLink>
-          <NavLink to="/about" className={buttonClasses}>
-            About
+          <NavLink to="/about">
+            <ShinyButton buttonText="About" />
           </NavLink>
         </div>
         <div className="md:absolute right-5">
@@ -63,7 +64,6 @@ function NavBar({ buttonClasses }: buttonClasses) {
           />
         </div>
       </div>
-      {/* <div className="navSpacer waves dark:darkWaves"></div> */}
       <img
         id="lightWaves"
         src={lightWaves}

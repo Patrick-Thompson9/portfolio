@@ -1,16 +1,9 @@
 import { NavLink } from "react-router-dom";
-import { useContext, useRef, useEffect, useState } from "react";
-import { AppContext } from "../App";
+import { useRef, useEffect, useState } from "react";
 import CursorTrackSVG from "./CursorTrackSVG";
 import { buttonClasses } from "../layouts/MainLayout";
 
 function Project() {
-  const context = useContext(AppContext);
-
-  if (!context) {
-    return null;
-  }
-
   const projectRef = useRef<HTMLElement>(null);
 
   // Add slide-in animation when project card is in view
