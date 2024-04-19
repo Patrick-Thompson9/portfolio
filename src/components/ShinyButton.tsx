@@ -20,7 +20,7 @@ function ShinyButton({ buttonText }: props) {
   const linearOverlayClasses = darkTheme
     ? "dark-linear-overlay"
     : "linear-overlay";
-  const textClasses = darkTheme ? "text-slate-900" : "text-slate-100";
+  const textClasses = darkTheme ? "text-slate-700" : "text-slate-100";
 
   return (
     <motion.button
