@@ -6,11 +6,7 @@ import { AppContext } from "../App";
 import { useContext } from "react";
 import ShinyButton from "../components/ShinyButton";
 
-interface buttonClasses {
-  buttonClasses: string;
-}
-
-function NavBar({ buttonClasses }: buttonClasses) {
+function NavBar() {
   const context = useContext(AppContext);
 
   if (!context) {
@@ -57,11 +53,7 @@ function NavBar({ buttonClasses }: buttonClasses) {
           </NavLink>
         </div>
         <div className="md:absolute right-5">
-          <ThemeToggle
-            darkTheme={darkTheme}
-            setDarkTheme={setDarkTheme}
-            classes={buttonClasses}
-          />
+          <ThemeToggle darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
         </div>
       </div>
       <img

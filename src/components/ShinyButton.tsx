@@ -24,7 +24,7 @@ function ShinyButton({ buttonText }: props) {
 
   return (
     <motion.button
-      className={`relative m-10 py-2 px-4 bg-white rounded-md transition-colors duration-1000 ${radialGradientClasses}`}
+      className={`relative py-2 px-4 bg-white rounded-md transition-colors duration-1000 ${radialGradientClasses}`}
       initial={{ "--x": "100%" }}
       animate={{ "--x": "-100%" }}
       whileTap={{ scale: 0.95 }}
